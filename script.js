@@ -1,0 +1,103 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "smIPJBm8UjWu"
+      },
+      "outputs": [],
+      "source": [
+        "{\n",
+        "  \"nbformat\": 4,\n",
+        "  \"nbformat_minor\": 0,\n",
+        "  \"metadata\": {\n",
+        "    \"colab\": {\n",
+        "      \"provenance\": []\n",
+        "    },\n",
+        "    \"kernelspec\": {\n",
+        "      \"name\": \"python3\",\n",
+        "      \"display_name\": \"Python 3\"\n",
+        "    },\n",
+        "    \"language_info\": {\n",
+        "      \"name\": \"python\"\n",
+        "    }\n",
+        "  },\n",
+        "  \"cells\": [\n",
+        "    {\n",
+        "      \"cell_type\": \"code\",\n",
+        "      \"source\": [\n",
+        "        \"let userType = '';\\n\",\n",
+        "        \"let goal = '';\\n\",\n",
+        "        \"let time = '';\\n\",\n",
+        "        \"let subject = '';\\n\",\n",
+        "        \"\\n\",\n",
+        "        \"function goToStep2(type) {\\n\",\n",
+        "        \"    userType = type;\\n\",\n",
+        "        \"    document.getElementById('step1').style.display = 'none';\\n\",\n",
+        "        \"    document.getElementById('step2').style.display = 'block';\\n\",\n",
+        "        \"}\\n\",\n",
+        "        \"\\n\",\n",
+        "        \"function generatePlan() {\\n\",\n",
+        "        \"    goal = document.getElementById('goal').value;\\n\",\n",
+        "        \"    time = document.getElementById('time').value;\\n\",\n",
+        "        \"    subject = document.getElementById('subject').value;\\n\",\n",
+        "        \"\\n\",\n",
+        "        \"    if (!goal || !time || !subject) {\\n\",\n",
+        "        \"        alert(\\\"모든 항목을 입력해주세요!\\\");\\n\",\n",
+        "        \"        return;\\n\",\n",
+        "        \"    }\\n\",\n",
+        "        \"\\n\",\n",
+        "        \"    let planText = `<h3>학습 목표: ${goal}</h3><h3>과목: ${subject}</h3><h3>학습 시간: ${time}시간</h3><h4>추천 학습 계획:</h4>`;\\n\",\n",
+        "        \"\\n\",\n",
+        "        \"    if (userType === 'visual') {\\n\",\n",
+        "        \"        planText += `<p>시각적 자료(도표, 차트 등)를 활용해 학습하세요. 시간은 이론 학습 60%, 복습 40%로 분배하세요.</p>`;\\n\",\n",
+        "        \"    } else if (userType === 'auditory') {\\n\",\n",
+        "        \"        planText += `<p>강의나 오디오북을 활용하여 학습하세요. 시간을 강의 듣기 50%, 노트 정리 50%로 분배하세요.</p>`;\\n\",\n",
+        "        \"    } else if (userType === 'kinesthetic') {\\n\",\n",
+        "        \"        planText += `<p>손으로 실습하고 활동적으로 학습하세요. 학습 시간을 실습 70%, 이론 30%로 나누세요.</p>`;\\n\",\n",
+        "        \"    } else if (userType === 'introvert') {\\n\",\n",
+        "        \"        planText += `<p>혼자서 집중하여 학습하세요. 시간을 집중 학습 80%, 쉬는 시간 20%로 배분하세요.</p>`;\\n\",\n",
+        "        \"    } else if (userType === 'social') {\\n\",\n",
+        "        \"        planText += `<p>그룹 학습과 토론을 활용하여 학습하세요. 시간을 토론 및 그룹 공부 60%, 개인 공부 40%로 분배하세요.</p>`;\\n\",\n",
+        "        \"    }\\n\",\n",
+        "        \"\\n\",\n",
+        "        \"    document.getElementById('plan').innerHTML = planText;\\n\",\n",
+        "        \"    document.getElementById('step2').style.display = 'none';\\n\",\n",
+        "        \"    document.getElementById('step3').style.display = 'block';\\n\",\n",
+        "        \"}\\n\",\n",
+        "        \"\\n\",\n",
+        "        \"function reset() {\\n\",\n",
+        "        \"    document.getElementById('step1').style.display = 'block';\\n\",\n",
+        "        \"    document.getElementById('step3').style.display = 'none';\\n\",\n",
+        "        \"    document.getElementById('goal').value = '';\\n\",\n",
+        "        \"    document.getElementById('time').value = '';\\n\",\n",
+        "        \"    document.getElementById('subject').value = '';\\n\",\n",
+        "        \"}\\n\"\n",
+        "      ],\n",
+        "      \"metadata\": {\n",
+        "        \"id\": \"p9VmWheURLzS\"\n",
+        "      },\n",
+        "      \"execution_count\": null,\n",
+        "      \"outputs\": []\n",
+        "    }\n",
+        "  ]\n",
+        "}"
+      ]
+    }
+  ]
+}
