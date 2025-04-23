@@ -1,0 +1,71 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "source": [
+        "<!DOCTYPE html>\n",
+        "<html lang=\"ko\">\n",
+        "<head>\n",
+        "    <meta charset=\"UTF-8\">\n",
+        "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n",
+        "    <title>학습 계획 생성기</title>\n",
+        "    <link rel=\"stylesheet\" href=\"styles.css\">  <!-- 스타일 시트 연결 -->\n",
+        "</head>\n",
+        "<body>\n",
+        "    <div id=\"container\">\n",
+        "        <!-- Step 1: 학습자 유형 선택 -->\n",
+        "        <div id=\"step1\" class=\"step\">\n",
+        "            <h1>학습자 유형 선택</h1>\n",
+        "            <p>자신의 학습 스타일에 맞는 유형을 선택하세요.</p>\n",
+        "            <button onclick=\"goToStep2('visual')\">비주얼 학습자</button>\n",
+        "            <button onclick=\"goToStep2('auditory')\">청각 학습자</button>\n",
+        "            <button onclick=\"goToStep2('kinesthetic')\">운동 학습자</button>\n",
+        "            <button onclick=\"goToStep2('introvert')\">내성적 학습자</button>\n",
+        "            <button onclick=\"goToStep2('social')\">사교적 학습자</button>\n",
+        "        </div>\n",
+        "\n",
+        "        <!-- Step 2: 목표, 시간, 과목 입력 -->\n",
+        "        <div id=\"step2\" class=\"step\" style=\"display:none;\">\n",
+        "            <h1>공부 목표, 시간, 과목 입력</h1>\n",
+        "            <label for=\"goal\">공부 목표:</label>\n",
+        "            <input type=\"text\" id=\"goal\" placeholder=\"예: 시험 준비\">\n",
+        "            <label for=\"time\">학습 시간 (시간):</label>\n",
+        "            <input type=\"number\" id=\"time\" placeholder=\"예: 2\">\n",
+        "            <label for=\"subject\">과목:</label>\n",
+        "            <input type=\"text\" id=\"subject\" placeholder=\"예: 경제학\">\n",
+        "            <button onclick=\"generatePlan()\">계획 생성</button>\n",
+        "        </div>\n",
+        "\n",
+        "        <!-- Step 3: 맞춤형 공부 계획 제시 -->\n",
+        "        <div id=\"step3\" class=\"step\" style=\"display:none;\">\n",
+        "            <h1>맞춤형 학습 계획</h1>\n",
+        "            <div id=\"plan\"></div>\n",
+        "            <button onclick=\"reset()\">다시 시도</button>\n",
+        "        </div>\n",
+        "    </div>\n",
+        "    <script src=\"script.js\"></script>  <!-- JavaScript 파일 연결 -->\n",
+        "</body>\n",
+        "</html>\n"
+      ],
+      "metadata": {
+        "id": "F3xj-dR8b0_4"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
